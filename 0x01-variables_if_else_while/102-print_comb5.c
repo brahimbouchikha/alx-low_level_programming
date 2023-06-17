@@ -10,22 +10,17 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 9; j++)
+		for (j = i + 1; j < 9; j++)
 		{
-			for (k = 0; k < 10; k++)
-			{
-				for (l = j + 1; l < 10; l++)
-				{
-					putchar('0' + i);
-					putchar('0' + j);
-					putchar(' ');
-					putchar('0' + k);
-					putchar('0' + l);
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar('0' + i / 10);
+			putchar('0' + i % 10);
+			putchar(' ');
+			putchar('0' + j / 10);
+			putchar('0' + j % 10);
+			putchar(',');
+			putchar(' ');
 		}
+
 	}
 	putchar('\n');
 	return (0);
