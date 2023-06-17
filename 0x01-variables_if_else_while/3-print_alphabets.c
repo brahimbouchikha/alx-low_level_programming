@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char lc,uc;
+	char lc, uc;
 
 	lc = 'a';
 	uc = 'A';
