@@ -19,12 +19,12 @@ int main(void)
 				putchar('0' + k);
 				if (i < 7)
 				{
-                                	putchar(',');
+					putchar(',');
 					putchar(' ');
 				}
 			}
 		}
 	}
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }
