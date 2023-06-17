@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - write aphabet in lowercase and uppercase
  * Return: 0
  */
