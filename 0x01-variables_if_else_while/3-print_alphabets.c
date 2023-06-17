@@ -10,12 +10,12 @@ int main(void)
 
 	lc = 'a';
 	uc = 'A';
-	while (a < 'z')
+	while (lc < 'z')
 	{
 		putchar(lc);
 		lc++;
 	}
-	while (A < 'Z')
+	while (uc < 'Z')
 	{
 		putchar(uc);
 		uc++;
