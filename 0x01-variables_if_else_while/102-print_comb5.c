@@ -23,7 +23,7 @@ int main(void)
 					putchar('0' + l);
 					putchar(',');
 					putchar(' ');
-				}				}
+				}
 			}
 		}
 	}
