@@ -2,7 +2,7 @@
 
 /**
  * main - print all single difit number of base 10
- * Retrun: 0
+ * Return: 0
  */
 int main(void)
 {
