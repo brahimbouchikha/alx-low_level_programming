@@ -17,7 +17,7 @@ int main(void)
 			putchar(' ');
 			putchar('0' + j / 10);
 			putchar('0' + j % 10);
-			if ((i % 10) < 8 && (j % 10) != 9)
+			if ((i % 10) < 8 && (j % 10) < 9)
 			{
 				putchar(',');
 				putchar(' ');
