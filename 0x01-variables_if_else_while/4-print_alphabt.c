@@ -4,11 +4,11 @@
  * main - print all letter exept q and e
  * Return:0
  */
-int main (void)
+int main(void)
 {
 	char c;
 
-	c = a;
+	c = 'a';
 	while (c <= 'z') 
 	{
 		if (c != 'q' && c != 'e')
@@ -16,5 +16,5 @@ int main (void)
 		c++;
 	}
 	putchar('\n');
-	retrun(0);
+	return(0);
 }
