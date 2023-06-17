@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - print a to z 
+ * main - print a to z 
  * Return: 0
  */
 
@@ -11,10 +11,10 @@ int  main(void)
 
 	c = 'a';
 	while (c <= 'z')
-		{
-			putchar(c);
-			c++;
-		}
+	{
+		putchar(c);
+		c++;
+	}
 	putchar('\n');
 	return (0);
 }
