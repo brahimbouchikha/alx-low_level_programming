@@ -4,8 +4,8 @@
  * main - print some words
  * Return:0
  */
-int main (void)
+int main(void)
 {
-	puts("Programing is like buikding a multilingual puzzle");
+	puts("Programing is like buikding a multilingual puzzle\n");
 	return(0);
 }
