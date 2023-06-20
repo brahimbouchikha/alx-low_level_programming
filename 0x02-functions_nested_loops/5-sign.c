@@ -19,7 +19,7 @@ int print_sing(int n)
 		r = 0;
 	}
 	else
-	{	_putchar('-');
+		_putchar('-');
 
 	return (r);
 }
