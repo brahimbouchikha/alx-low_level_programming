@@ -8,5 +8,5 @@
 
 int _islower(int c)
 {
-	return (islower(int(c));
+	return (islower((int)c));
 }
