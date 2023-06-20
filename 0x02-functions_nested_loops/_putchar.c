@@ -3,10 +3,9 @@
 /**
  * _putchar - write the caracter c 
  * @c: the chacter to write 
- * Return: 0
+ * Return: 1 on success
  */
 int _putchar(char c)
 {
-	write(1,&c,1);
-	return(0);
+	return(write(1,&c,1));
 }
