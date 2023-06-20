@@ -7,7 +7,7 @@
 
 int print_sing(int n)
 {
-	int r;
+	int r=-1;
 	if (n > 0)
 	{
 		_putchar('+');
@@ -20,7 +20,6 @@ int print_sing(int n)
 	}
 	else
 	{	_putchar('-');
-		r = -1;
-	}
+
 	return (r);
 }
