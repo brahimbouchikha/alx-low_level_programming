@@ -4,7 +4,6 @@
  * main - writing words using _putchar
  * Return:0
  */
-
 int main (void)
 {
 	_putchar('_');
