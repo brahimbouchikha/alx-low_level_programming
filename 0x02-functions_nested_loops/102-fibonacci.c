@@ -8,11 +8,12 @@
 int main(void)
 {
 	long first, second, sum;
+	int i;
 
 	first = 1;
 	second = 2;	
 	printf("1, 2, ");
-	for (int i = 2; i <= 50; i++)
+	for (i = 2; i <= 50; i++)
 	{
 		sum = first + second;
 		first = second;
