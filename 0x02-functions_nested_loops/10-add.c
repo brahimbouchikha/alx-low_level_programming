@@ -2,7 +2,8 @@
 
 /**
  * add - function that calculate the sum of two integers
- * @n, @m: two input integers
+ * @n: first input integers
+ * @m: second input integers
  * Return: return sum of 2 integers
  */
 
