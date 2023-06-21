@@ -7,19 +7,19 @@
 
 int print_sing(int n)
 {
-	int r=-1;
 	if (n > 0)
 	{
 		_putchar('+');
-		r = 1;	
+		return (1);	
 	}
 	else if (n == 0)
 	{
 		_putchar('0');
-		r = 0;
+		return (0);
 	}
 	else
+	{
 		_putchar('-');
-
-	return (r);
+		return (-1);
+	}
 }
