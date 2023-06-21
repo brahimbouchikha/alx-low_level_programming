@@ -14,7 +14,7 @@ void times_table(void)
 		{	prod = i * j;
 			if(( i * j) >= 10)
 				_putchar('0' + prod / 10);
-sh: 1: q: not found
+			else
 				_putchar(' ');
 			_putchar('0' +  (prod % 10));
 			if (j <= 8)
