@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int i, first = 1, second = 2, next, sum = 2;
+	int first = 1, second = 2, next, sum = 2;
 
-	for (i = 0; i < 4000000; i++)
+	while (second <= 4000000)
 	{
 		next = first + second;
 		if (next % 2 == 0)
