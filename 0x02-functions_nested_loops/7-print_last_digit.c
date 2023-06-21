@@ -7,7 +7,7 @@
  * Return: last digit of number
  */
 int print_last_digit(int n)
-{	
+{
 	int lastdigit;
 
 	if (n < 0)
