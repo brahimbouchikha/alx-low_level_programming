@@ -18,6 +18,7 @@ int main(void)
 		sum = first + second;
 		first = second;
 		second = sum;
+		printf("%ld, sum");
 		if (i < 50)
 			printf(", ");
 	}
