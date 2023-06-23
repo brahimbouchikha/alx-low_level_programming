@@ -2,7 +2,7 @@
 
 /**
  * main - prints the numbers from 1 to 100
- * Return: 0 
+ * Return: 0
  */
 
 int main(void)
