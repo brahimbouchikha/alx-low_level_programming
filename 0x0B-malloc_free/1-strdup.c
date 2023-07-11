@@ -11,11 +11,11 @@ char *_strdup(char *str)
 {
 	char *tab;
 	unsigned int i, len = 0;
-	
+
 	while (str[len] != '\0')
 		len++;
 
-	if (len == 0)
+	if (len == NULL)
 		return (NULL);
 
 	tab = malloc((len * sizeof(char)) + 1);
@@ -24,6 +24,6 @@ char *_strdup(char *str)
 
 	for (i = 0; i < len; i++)
 		tab[i] = str[i];
-	tab [len] = '\0';
+	tab[len] = '\0';
 	return (tab);
 }
