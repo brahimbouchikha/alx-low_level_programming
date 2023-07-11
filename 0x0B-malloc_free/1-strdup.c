@@ -10,9 +10,9 @@
 char *_strdup(char *str)
 {
 	char *tab;
-	unsigned int i, len = 0;
+	unsigned int i, len = 1;
 
-	while (str[len] != '\0')
+	while (str[len]:)
 		len++;
 
 	if (len == 0)
