@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	char *tab;
 	unsigned int i, len = 1;
 
-	while (str[len]:)
+	while (str[len])
 		len++;
 
 	if (len == 0)
