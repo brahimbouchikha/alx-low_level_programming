@@ -3,7 +3,7 @@
 
 /**
  * create_array - creates an array of chars, and initializes it with a specific char
- * @size: size of array 
+ * * @size: size of array
  * @c: character
  * Return: tableu of char
  */
@@ -13,14 +13,12 @@ char *create_array(unsigned int size, char c)
 	char *tab;
 	unsigned int i;
 	
-	if (size == 0)
+	if(size == 0)
 	{
 		return (NULL);
 	}
-	
-	tab = malloc(size * sizeof(char));
-	
-	if (tab == 0)
+	tab = malloc(size * sizeof(char));	
+	if(tab == 0)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
