@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		tab[n] = s1[n];
 	}
-	for(m = 0; m < j; m++)
+	for (m = 0; m < j; m++)
 	{
 		tab[m + i] = s2[m];
 	}
