@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		str[k] = s1[k];
 	}
-	for (l = 0; l < len - i; l++)
+	for (l = 0; l < len - i - 1; l++)
 	{
 		str[k + l] = s2[l];
 	}
