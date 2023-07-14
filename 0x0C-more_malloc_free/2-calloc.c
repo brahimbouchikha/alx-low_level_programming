@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * _calloc - allocates memory for an array, using malloc
  * @nmemb: number of elements
  * @size: number of bytes
  */
-
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
