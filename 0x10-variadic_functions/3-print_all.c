@@ -23,7 +23,7 @@ void format_int(char *separator, va_list ap)
 }
 
 /**
- * format_float: formats float
+ * format_float - formats float
  * @separator: the string separator
  * @ap: arguement pointer
  */
@@ -51,7 +51,7 @@ void format_string(char *separator, va_list ap)
 /**
  * print_all - prints anything
  * @format: the format string
- *
+ * Return: NULL
  */
 
 void print_all(const char * const format, ...)
