@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 	int i = 0, nc = 0, j = 0, cmpt = 0;
 	char *s;
 
-	for (ac == 0 || av == NULL)
+	if (ac == 0 || av == NULL)
 		nc += _strlen(av[i]);
 
 	s = malloc(sizeof(char) * nc + 1);
