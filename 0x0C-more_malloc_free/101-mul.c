@@ -1,7 +1,66 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+/**
+ * _puts - print a string, follwed by new line
+ * @str: pointer to the string to print
+ * Return: void
+ */
+void _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
+/**
+ * _atoi - convert a string to intger
+ * @s: string to convert
+ * Return: Integer
+ */
+
+int _atoi(const char *s)
+{
+	int sign = 1;
+	unsigned long int resp = 0, firstNum, i;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	{
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
+	}
+	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
+}
+
+/**
+ * print_int - print an integer
+ * @n: int
+ * Return: 0
+ */
+void print_int(unsigned long int n)
+{
+	unsigned long int divisor = 1, i, resp;
+
+	for (i = 0; n / divisor > 9; i++, divisor *= 10)
+		;
+
+	for (; divisor >= 1; n %= divisor, divisor /= 10)
+	{
+		resp = n / divisor;
+		_putchar('0' + resp);
+	}
+}
+
 
 /**
  * main - multiplies two positive numbers.
@@ -13,36 +72,14 @@
 int main(int argc, char *argv[])
 {
 	(void)argc;
-	int mul;
-	unsigned int i;
 
 	if (argc != 3)
 	{
-		printf("Error");
+		_puts("Error");
 		exit(98);
 	}
-	
-	for (i = 0; i < strlen(argv[1]); i++)
-	{
-		if (argv[1][i] < 48 || argv[1][i] > 57)
-		{
-			printf("Error");
-			exit(98);
-		}	
-	}
+	print_int(_atoi(argv[1]) * _atoi(argv[2]));
+	_putchar('\n');
 
-	for (i = 0; i < strlen(argv[2]); i++)
-	{
-		if (argv[2][i] < 48 || argv[2][i] > 57)
-		{
-			printf("Error");
-			exit(98);
-		}	
-	}
-
-	mul = atoi(argv[1]) * atoi(argv[2]);
-
-	printf("%d\n", mul);
-	
 	return (0);
 }
