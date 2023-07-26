@@ -17,7 +17,7 @@ void format_char(char *separator, va_list ap)
  * @ap: arguement pointer
  */
 
-void format_int(char separator, va_list ap)
+void format_int(char *separator, va_list ap)
 {
 	printf("%s%d", separator, va_arg(ap, int));
 }
@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (tokens[j].token)
 		{
-			if (format[i] == token[0])
+			if (format[i] == tokens[j].token[0])
 			{
 				tokens[j].f(separator, ap);
 				separator = ", ";
