@@ -4,7 +4,6 @@
  * print_list - print a linked lists
  * @h: pointer to first node
  *
- *
  * Return: size of list
  */
 
