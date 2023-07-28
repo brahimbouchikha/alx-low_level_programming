@@ -7,9 +7,9 @@
  * Return: lenth of string
  */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	if (!s)
 		return (0);
@@ -32,7 +32,7 @@ size_t print_list(const list_t *h)
 
 	while (h)
 	{
-		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		printf("[%u] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
 		i++;
 	}
