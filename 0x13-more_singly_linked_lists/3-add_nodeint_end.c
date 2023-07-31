@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint_end - add a new node at the end of a list
- * @head - pointer to linked list
+ * @head:  pointer to linked list
  * @n: data integer
  *
  * Return: pointer to the new node
@@ -17,10 +17,15 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (NULL);
 	temp->n = n;
 	temp->next = NULL;
-	ptr = *head;
-	while (ptr->next != NULL)
-		ptr = ptr->next;
+	if (*head == NULL)
+		*head = temp;
+	else
+	{
+		ptr = *head;
+		while (ptr->next != NULL)
+			ptr = ptr->next;
 
-	ptr->next = temp;
-	return (ptr);
+		ptr->next = temp;
+	}
+	return (temp);
 }
