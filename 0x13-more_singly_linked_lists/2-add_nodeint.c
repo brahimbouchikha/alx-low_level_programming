@@ -5,7 +5,7 @@
  * @head: pointer to the list
  * @n: data int
  *
- * Retunr: pointer to the new element
+ * Return: pointer to the new element
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
@@ -15,6 +15,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	ptr = malloc(sizeof(listint_t));
 	ptr->n = n;
 	ptr->next = *head;
+	if(!ptr)
+		return (NULL);
 	*head = ptr;
 
 	return (*head);
