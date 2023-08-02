@@ -1,4 +1,4 @@
-#include "function_pointer"
+#include "function_pointer.h"
 
 /**
  * main - check the code for the School students
