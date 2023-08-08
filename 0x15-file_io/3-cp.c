@@ -60,14 +60,14 @@ int main(int argc, char *argv[])
 	do {
 		if (file_from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",argv[1]);
 			exit(98);
 			free(buffer);
 		}
 		w = write(file_to, buffer, r);
 		if (file_to == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
