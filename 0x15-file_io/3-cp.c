@@ -5,7 +5,7 @@
  * @fd: file to close
  */
 
-void close_file(fd)
+void close_file(int fd)
 {
 	if (close(fd) == -1)
 	{
