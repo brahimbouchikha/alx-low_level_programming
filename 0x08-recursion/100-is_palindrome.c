@@ -12,7 +12,7 @@ int lengthstring(char *c)
 	if (*c == '\0')
 		return (0);
 	else
-		return (1 + lentghstring(c + 1));
+		return (1 + lengthstring(c + 1));
 }
 
 /**
