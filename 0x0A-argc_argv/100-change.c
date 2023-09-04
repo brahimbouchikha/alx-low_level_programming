@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int count, cents;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
 			continue;
 		}
 	}
-
 	printf("%d\n", count);
 	return (0);
 }
