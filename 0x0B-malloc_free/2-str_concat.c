@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		s1 = " ";
-	if (s1 == NULL)
+	if (s2 == NULL)
 		s2 = " ";
 	size1 = strlength(s1);
 	size2 = strlength(s2);
