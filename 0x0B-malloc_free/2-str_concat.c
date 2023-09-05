@@ -31,10 +31,9 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 
 	if (s1 == NULL)
-		s1 = ' ';
+		s1 = " ";
 	if (s1 == NULL)
-		s2 = ' ';
-
+		s2 = " ";
 	size1 = strlength(s1);
 	size2 = strlength(s2);
 	newsize = size1 + size2 + 1;
