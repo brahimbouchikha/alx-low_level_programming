@@ -15,6 +15,7 @@ void _puts(char *str)
 		i++;
 	}
 }
+
 /**
  * _atoi - convert a string to intger
  * @s: string to convert
