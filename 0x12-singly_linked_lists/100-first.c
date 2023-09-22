@@ -1,13 +1,15 @@
-#include <stdio.h>
+#include "lists.h"
+
+void _constructor(void) __attribute__ ((constructor));
 
 /**
- * main - check the code
+ * _constructor - execute befor main()
  *
- * Return: Always 0.
+ * Return void
  */
-int main(void)
+
+void _constructor(void)
 {
-	printf("(A tortoise, having pretty good sense of a hare's nature,
-	     challenges one to a race.)\n");
-	return (0);
+	printf("You're beat! and yet, you must allow,\n"
+			"I bore my house upon my back!\n");
 }
