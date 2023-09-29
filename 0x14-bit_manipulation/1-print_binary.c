@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 		bitCount++;
 	}
 	while (bitCount > 0)
-	{	
+	{
 		result = (n >> (bitCount - 1)) & 1;
 		_putchar(result + '0');
 		bitCount--;
