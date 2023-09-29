@@ -18,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		temp = temp >> 1;
 		bitcount++;
 	}
-	if (bitcount < index)
+	if (bitcount > index)
 	{
 		for (i = 0; i < bitcount; i++)
 		{
