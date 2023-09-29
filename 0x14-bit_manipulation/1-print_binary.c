@@ -9,7 +9,8 @@ void print_binary(unsigned long int n)
 {
 	int bitCount = 0;
 	unsigned long int temp = n;
-
+	if (n == 0)
+		printf("0");
 	while (temp > 0)
 	{
 		temp = temp >> 1;
