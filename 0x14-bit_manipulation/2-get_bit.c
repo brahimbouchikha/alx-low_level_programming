@@ -18,15 +18,16 @@ int get_bit(unsigned long int n, unsigned int index)
 		temp = temp >> 1;
 		bitcount++;
 	}
-	if (index >= bitcount)
-		return (-1);
-	for (i = 0; i < bitcount; i++)
+	if (bitcount < index)
 	{
-		if (i == index)
+		for (i = 0; i < bitcount; i++)
 		{
-			return (n & 1);
+			if (i == index)
+			{
+				return (n & 1);
+			}
+			n = n >> 1;
 		}
-		n = n >> 1;
 	}
 	return (-1);
 }
