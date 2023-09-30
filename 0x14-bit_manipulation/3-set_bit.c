@@ -23,7 +23,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		temp = temp >> 1;
 		bitcount++;
 	}
-	if (index < bitcount)
+	if (index <= bitcount)
 	{
 		i = bitcount - 1;
 		while (bitcount > 0)
