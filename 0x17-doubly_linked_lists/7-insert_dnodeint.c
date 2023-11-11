@@ -1,5 +1,21 @@
 #include "lists.h"
 /**
+ * calc_element - calculate number of node in list
+ * @h: pointer to the head of the linked list
+ * Return: number of node
+ */
+
+unsigned int calc_element(dlistint_t *h)
+{
+	unsigned int count = 0;
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+}
+
+/**
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: Pointer to the head of the linked list
  * @idx: the index of the list where the new node should be added
@@ -12,6 +28,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *node, *tmp = (*h), *tmp2;
 
+	if (idx > calc_element((*h)))
+		return (NULL);
 	if ((*h) == NULL)
 		return (NULL);
 	node = malloc(sizeof(dlistint_t));
