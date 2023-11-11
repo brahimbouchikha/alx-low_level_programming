@@ -30,18 +30,21 @@ unsigned int calc_element(dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *node, *tmp = (*h), *tmp2;
+	unsigned int d = 1;
 
 	if ((*h) == NULL)
 		return (NULL);
-	if (idx > calc_element((*h)) + 1 || n < 0)
+	if (idx > calc_element((*h)) + 1)
 		return (NULL);
+	if (idx == calc_element((*h)))
+		d = 2;
 	node = malloc(sizeof(dlistint_t));
 	if (node == NULL)
 		return (NULL);
 	node->next = NULL;
 	node->n = n;
 	node->prev = NULL;
-	while (idx > 1)
+	while (idx > d)
 	{
 		tmp = tmp->next;
 		idx--;
