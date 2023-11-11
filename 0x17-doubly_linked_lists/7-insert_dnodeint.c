@@ -18,10 +18,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	node->next = NULL;
 	node->n = n;
 	node->prev = NULL;
-	while (n != 1)
+	while (idx != 1)
 	{
 		tmp = tmp->next;
-		n--;
+		idx--;
 	}
 	tmp2 = tmp->next;
 	tmp->next = node;
