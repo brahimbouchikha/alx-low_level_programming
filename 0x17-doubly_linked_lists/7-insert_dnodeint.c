@@ -15,6 +15,7 @@ unsigned int calc_element(dlistint_t *h)
 		count++;
 		h = h->next;
 	}
+	return (count);
 }
 
 /**
