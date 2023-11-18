@@ -1,23 +1,5 @@
 #include "lists.h"
 
-
-/**
- * calc_element - calculate number of node in list
- * @h: pointer to the head of the linked list
- * Return: number of node
- */
-
-unsigned int calc_element(dlistint_t *h)
-{
-	unsigned int count = 0;
-	while (h != NULL)
-	{
-		count++;
-		h = h->next;
-	}
-	return (count);
-}
-
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: Pointer to the head of the linked list
@@ -30,7 +12,7 @@ unsigned int calc_element(dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *node, *tmp = (*h);
-	unsigned int d = 1;
+	unsigned int i;
 
 	if ((*h) == NULL)
 		return (NULL);
@@ -40,15 +22,32 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	node->next = NULL;
 	node->n = n;
 	node->prev = NULL;
-	while (idx > d)
+	if ((*h) == NULL && idx == 0)
 	{
-		tmp = tmp->next;
-		idx--;
+		*h = node;
+		return (node);
 	}
-	node->next = tmp->next;
-	tmp->next = node;
-	node->prev = tmp;
-	if (node->next != NULL)
-		node->next->prev = node;
-	return ((*h));
+	for (i = 0; i < idx - 1 && tmp != NULL; i++)
+		tmp = tmp->next;
+	if (tmp == NULL && i < idx - 1)
+	{
+		free(node);
+		return (NULL);
+	}
+	if (idx == 0)
+	{
+		node->next = *h;
+		(*h)->prev = node;
+		*h = node;
+	}
+	else
+	{
+		node->prev = tmp;
+		node->next = tmp->next;
+		if (tmp->next != NULL)
+			tmp->next->prev = node;
+		tmp->next = node;
+	}
+	
+	return (node);
 }
