@@ -27,22 +27,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(entry->key, key);
 	strcpy(entry->value, value);
 	index = hash_djb2((const unsigned char *)key);
-	entry->next = ht->array[index];
-	ht->array[index] = entry;
-	/*if (ht->array[index] == NULL)
+	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = entry;
 		return (1);
 	}
 	else
 	{
-		current = ht->array[index];
-		while (current->next != NULL)
-		{
-			current = current->next;
-		}
-		current->next = entry;
+		entry->next = ht->array[index];
+		ht->array[index] = entry;
 		return (1);
-	}*/
-	return (1);
+	}
+	return (0);
 }
