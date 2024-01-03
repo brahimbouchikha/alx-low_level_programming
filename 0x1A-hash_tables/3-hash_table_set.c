@@ -9,7 +9,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *entry, *entry_pos;
+	hash_node_t *entry, *current;
 
 	if (key == NULL)
 		return (0);
@@ -19,19 +19,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	entry->key = malloc(strlen(key) + 1);
 	entry->value = malloc(strlen(value) + 1);
 	entry->next = NULL;
-	strcpy(entry->key, key);
-	strcpy(entry->value, value);
+	entry->key = strdup(key);
+	entry->value = strdup(value);
 	index = hash_djb2((const unsigned char *)key);
-	entry_pos = ht->array[index];
-	if (entry_pos == NULL)
+	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = entry;
 		return (1);
 	}
-	while (ht->array[index] != NULL)
+	else
 	{
-		entry_pos = entry_pos->next;
+		current = ht->array[index];
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+		current->next = entry;
+		return (1);
 	}
-	entry_pos->next = entry;
-	return (1);
+	return (0);
 }
