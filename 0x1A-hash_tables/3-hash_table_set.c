@@ -43,18 +43,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	entry = (hash_node_t *) malloc(sizeof(hash_node_t));
 	if (!entry)
 		return (0);
-	index = key_index((const unsigned char *)key, ht->size);
-	current = ht->array[index];
-	if (strcmp(current->key, key) == 0)
-	{
-		strcpy(ht->array[index], value);
-		return (1)
-	}
 	entry = make_node(key, value);
 	if (entry == NULL)
 		return (0);
-	entry->next = ht->array[index];
-	ht->array[index] = entry;
+	index = key_index((const unsigned char *)key, ht->size);
+	current = ht->array[index];
+	if (current == NULL)
+	{
+		ht->array[index] = entry;
+	}
+	else 
+	{	
+		if(strcmp(current->key, key) == 0)
+		{
+			strcpy(ht->array[index]->value, value);
+			return (1);
+		}
+		entry->next = ht->array[index];
+		ht->array[index] = entry;
+	}
 	return (1);
 }
 
