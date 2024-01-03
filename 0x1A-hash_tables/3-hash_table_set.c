@@ -52,9 +52,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		ht->array[index] = entry;
 	}
-	else 
-	{	
-		if(strcmp(current->key, key) == 0)
+	else
+	{
+		if (strcmp(current->key, key) == 0)
 		{
 			strcpy(ht->array[index]->value, value);
 			return (1);
