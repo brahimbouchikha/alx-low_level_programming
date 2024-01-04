@@ -21,9 +21,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		if (strcmp(ptr->key, key) == 0)
 		{
 			return (ptr->value);
-		
 		}
-		ptr = ptr->next;
+		if (ptr->next != NULL)
+			ptr = ptr->next;
 	}
 	return (NULL);
 }
