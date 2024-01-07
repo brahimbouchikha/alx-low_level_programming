@@ -56,7 +56,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current->key, key) == 0)
 		{
-			strcpy(ht->array[index]->value, value);
+			/*strcpy(ht->array[index]->value, value);*/
+			free(current->value);
+			current->value = strdup(value);
 			return (1);
 		}
 		entry->next = ht->array[index];
