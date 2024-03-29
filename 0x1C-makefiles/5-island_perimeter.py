@@ -13,6 +13,7 @@ def island_perimeter(grid):
 			if n == 1:
 				if i == 0 or grid[i - 1][j] != 1:
 					c += 1
+					
 				if j == 0 or grid[i][j - 1] != 1:
 					c += 1
 				if j == width or grid[i][j + 1] != 1:
